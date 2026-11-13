@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Typing Speed Assesment</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card" role="application" aria-label="Typing speed test">
+    <h1 class="title">Typing Speed Assesment</h1>
+    <header>
+      <div>
+        <div class="small-muted">Type the text below as accurately and quickly as you can.</div>
+      </div>
+
+      <div class="controls" aria-hidden="false">
+        <label class="small-muted" for="duration">Duration</label>
+        <select id="duration" title="Test duration (seconds)">
+          <option value="15">15s</option>
+          <option value="30" selected>30s</option>
+          <option value="60">60s</option>
+        </select>
+        <button id="startBtn" class="primary" aria-pressed="false">Start</button>
+        <button id="resetBtn" title="Reset test">Reset</button>
+        <button id="nextBtn" title="Load different passage">Next passage</button>
+      </div>
+    </header>
+
+    <div id="passage" class="passage" tabindex="0" aria-label="Typing passage"></div>
+
+    <div class="stats" aria-live="polite">
+      <div class="stat"><small>Time left</small><strong id="time">--</strong></div>
+      <div class="stat"><small>WPM</small><strong id="wpm">0</strong></div>
+      <div class="stat"><small>Accuracy</small><strong id="acc">100%</strong></div>
+      <div class="stat"><small>Typed chars</small><strong id="typed">0</strong></div>
+      <div class="stat"><small>Mistakes</small><strong id="mistakes">0</strong></div>
+      <div class="stat"><small>Best WPM</small><strong id="best">--</strong></div>
+    </div>
+
+    <div class="input-row">
+      <textarea id="input" class="input" placeholder="Start typing here..." aria-label="Typing input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+    </div>
+
+    <div class="footer">
+      <div class="small-muted">A project for Software Engineering.</div>
+      <div class="small-muted">Developed by Asadullah & Eeshan</div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
